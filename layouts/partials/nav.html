@@ -1,0 +1,24 @@
+<!-- Menu toggle -->
+<a href="#menu" id="menuLink" class="menu-link">
+  <!-- Hamburger icon -->
+  <span></span>
+</a>
+
+<!-- sidebar start -->
+<div id="menu">
+  <div class="pure-menu">
+    <div class="pure-menu-heading">
+      {{ .Site.Params.brand }}
+    </div>
+    <ul class="pure-menu-list">
+      <li class="pure-menu-item">
+        <a class="pure-menu-link" href="/">首页</a>
+      </li>
+      {{ range .Site.Menus.main }}
+	<li class="pure-menu-item">
+          <a class="pure-menu-link" href="{{ .URL }}">{{ .Name }}</a>
+        </li>
+      {{ end }}
+    </ul>
+  </div>
+</div>

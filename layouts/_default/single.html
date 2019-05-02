@@ -1,0 +1,24 @@
+{{ define "main" }}
+{{ .Content }}
+
+<aside id="meta">
+  <div>
+    <div id="date"> {{ .Date.Format "2006-01-02 15:04:05" }} </div>
+    {{ with .Params.topics }}
+      <ul id="topics">
+	{{ range . }}
+          <li><a href="{{ "topics" | absURL}}{{ . | urlize }}">{{ . }}</a> </li>
+	{{ end }}
+      </ul>
+    {{ end }}
+    {{ with .Params.tags }}
+      <ul id="tags">
+	{{ range . }}
+          <li> <a href="{{ "tags" | absURL }}/{{ . | urlize }}">{{ . }}</a> </li>
+	{{ end }}
+      </ul>
+    {{ end }}
+  </div>
+</aside>
+
+{{ end }}
