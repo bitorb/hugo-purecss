@@ -247,11 +247,12 @@ pre {
 }
 
 #tag-cloud {
-  padding: 15px 5px;
+  padding: 15px 0px;
 }
 
 #tag-cloud a {
   text-decoration: none;
+  padding-right: 10px;
 }
 
 .footnotes {
