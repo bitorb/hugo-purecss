@@ -244,6 +244,7 @@ pre, code {
 
 pre {
   padding: .5em;
+  background-color: #f8f8f8;
 }
 
 #tag-cloud {

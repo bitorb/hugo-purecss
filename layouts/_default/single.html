@@ -1,4 +1,5 @@
 {{ define "main" }}
+
 <div class="post-meta">
   <div id="date"> {{ .Date.Format "2006-01-02 15:04:05" }} </div>
   {{ with .Params.tags }}
@@ -10,5 +11,6 @@
   {{ end }}
 </div>
 
+{{- partial "toc.html" . -}}
 {{ .Content }}
 {{ end }}
